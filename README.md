@@ -27,20 +27,25 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
 
     ```
    This will open a browser in the current window.
-4. 
-5. . Run this script for Firefox.
+4. . Run this script for Firefox.
     ```
     py.test --browser_name firefox -v -s
 
     ```
    This will open a browser in the current window.
 
-6. Now you can scan your whatsapp QR code in from phone.
+5. Now you can scan your whatsapp QR code in from phone.
     ```
     py.test 
 
     ```
    This will default cmd. Open with Chrome.
+6. Generate HTML report
+    ```
+    pytest --html=report.html 
+
+    ```
+   This will create a HTML report.
 
 ### Usage
 
