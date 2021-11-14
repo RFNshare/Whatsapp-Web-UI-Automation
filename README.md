@@ -21,16 +21,26 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
     pip3 freeze > requirements.txt
     ```
 
-3. Run this script.
+3. Run this script for Chrome.
     ```
-    py.test -v -s
+    py.test --browser_name chrome -v -s
+
+    ```
+   This will open a browser in the current window.
+4. 
+5. . Run this script for Firefox.
+    ```
+    py.test --browser_name firefox -v -s
+
     ```
    This will open a browser in the current window.
 
-4. Now you can scan your whatsapp QR code in from phone.
+6. Now you can scan your whatsapp QR code in from phone.
     ```
-    
+    py.test 
+
     ```
+   This will default cmd. Open with Chrome.
 
 ### Usage
 
