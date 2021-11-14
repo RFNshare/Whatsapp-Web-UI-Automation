@@ -52,4 +52,4 @@ You can use the whatsapp instance to perform any simple action.
 
 ```
 
-While the above code is very script, it provides 30s to scan QR code.
+While the above code is very script, it provides 2 min to scan QR code.
