@@ -20,7 +20,7 @@ def setup(request):
             executable_path=r'C:\Users\rfnsh\PycharmProjects\WhatsappWebUiAutomation\utilites\geckodriver.exe')
 
     driver.get('https://web.whatsapp.com/')
-    time.sleep(5)
+    driver.implicitly_wait(180)
     driver.maximize_window()
     request.cls.driver = driver
     yield
