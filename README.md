@@ -42,7 +42,7 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
    This will default cmd. Open with Chrome.
 6. Generate HTML report
     ```
-    pytest --html=report.html 
+    pytest --html=report.html --capture=tee-sys 
 
     ```
    This will create a HTML report.

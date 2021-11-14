@@ -16,6 +16,8 @@ class TestWhatsApp(BaseClass):
         time.sleep(2)
         assert search_field.text == data
         search_field.clear()
+        log = self.getLogger()
+        log.info("Display searched contact")
         time.sleep(2)
 
     def test_tc002(self):
@@ -29,6 +31,8 @@ class TestWhatsApp(BaseClass):
         msg_field = self.driver.find_element_by_css_selector("div[title='Type a message']")
         msg_field.send_keys(msg_data)
         msg_field.send_keys(Keys.ENTER)
+        log = self.getLogger()
+        log.info("Successfully send message")
         time.sleep(2)
 
     def test_tc003(self):
@@ -50,6 +54,8 @@ class TestWhatsApp(BaseClass):
         #     sh1.cell(row=2, column=2, value='sent')
         #     exl.save('whatsapp_number.xlsx')
         assert f_sent == ' Sent ' or ' Delivered '
+        log = self.getLogger()
+        log.info("Successfully write result on excel")
         time.sleep(2)
 
     def test_tc004(self):
@@ -67,8 +73,12 @@ class TestWhatsApp(BaseClass):
             # sh1.cell(row=2, column=3, value='Not Seen')
             # exl.save('whatsapp_number.xlsx')
             assert f_sent == ' Delivered '
+        log = self.getLogger()
+        log.info("successfully write message status on excel")
         time.sleep(2)
 
     def test_tc005(self):
         self.driver.find_element_by_xpath("//span[@data-testid='menu']").click()
         self.driver.find_element_by_xpath("//div[@aria-label='Log out']").click()
+        log = self.getLogger()
+        log.info("successfully logged out from whatsapp")
