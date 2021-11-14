@@ -5,7 +5,7 @@ import time
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--browser_name", action="store", default="chorme"
+        "--browser_name", action="store", default="chrome"
     )
 
 
@@ -18,10 +18,9 @@ def setup(request):
     elif browser_name == "firefox":
         driver = webdriver.Firefox(
             executable_path=r'C:\Users\rfnsh\PycharmProjects\WhatsappWebUiAutomation\utilites\geckodriver.exe')
-    else:
-        print("Browser name incorrect")
+
     driver.get('https://web.whatsapp.com/')
-    time.sleep(30)
+    time.sleep(5)
     driver.maximize_window()
     request.cls.driver = driver
     yield
