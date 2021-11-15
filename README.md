@@ -34,18 +34,18 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
     ```
    This will open a browser in the current window.
 
-5. Now you can scan your whatsapp QR code in from phone.
+5. This will default cmd. Open with Chrome.
     ```
     py.test 
 
     ```
-   This will default cmd. Open with Chrome.
-6. Generate HTML report
+   
+6. Generate HTML reports with run script include log.
     ```
     pytest --html=report.html --capture=tee-sys 
 
     ```
-   This will create a HTML report.
+   This will create an HTML report. You can find report in project's root directory
 
 ### Usage
 
@@ -57,4 +57,4 @@ You can use the whatsapp instance to perform any simple action.
 
 ```
 
-While the above code is very script, it provides 2 min to scan QR code.
+While the above code is a script, it provides 2 min to scan QR code for login into Whatsapp WEB.
