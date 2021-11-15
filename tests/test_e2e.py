@@ -44,7 +44,7 @@ class TestWhatsApp(BaseClass):
         sent_reversed = sent[-1]
         time.sleep(2)
         f_sent = sent_reversed.get_attribute('aria-label')
-        print(f_sent)
+
         if f_sent == ' Read ':
             TestData.sheet.cell(row=2, column=3, value='Seen')
             # sh1.cell(row=2, column=3, value='Seen')
