@@ -4,6 +4,7 @@ import pytest
 from selenium.webdriver import Keys
 from pageObjects.home_page import HomePage
 from utilites.BaseClass import BaseClass
+from utilites.TestData import TestData
 
 
 class TestWhatsApp(BaseClass):
@@ -23,7 +24,7 @@ class TestWhatsApp(BaseClass):
     def test_tc003(self):
         homepage = HomePage(self.driver)
         homepage.search_field()
-        homepage.msg_field().send_keys(HomePage.msg_data)
+        homepage.msg_field().send_keys(TestData.SEARCH_TERM)
         homepage.msg_field().send_keys(Keys.ENTER)
         sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-check"]')
         sent_reversed = sent[-1]
