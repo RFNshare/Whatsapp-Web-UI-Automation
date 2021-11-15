@@ -31,28 +31,28 @@ class TestWhatsApp(BaseClass):
         time.sleep(2)
         f_sent = sent_reversed.get_attribute('aria-label')
 
-        # if sent == ' Sent ':
-        #     sh1.cell(row=2, column=2, value='sent')
-        #     exl.save('whatsapp_number.xlsx')
+        if sent == ' Sent ' or ' Delivered ':
+            TestData.sheet.cell(row=2, column=2, value='Sent')
+            TestData.data_load.save(TestData.EXCEL_EXECUTABLE_PATH)
         assert f_sent == ' Sent ' or ' Delivered '
         log = self.getLogger()
         log.info("Successfully write result on excel")
         time.sleep(2)
 
     def test_tc004(self):
-        # sent = self.driver.find_elements_by_css_selector('span[data-testid*="msg-check"]'
         sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-dblcheck"]')
         sent_reversed = sent[-1]
         time.sleep(2)
         f_sent = sent_reversed.get_attribute('aria-label')
         print(f_sent)
         if f_sent == ' Read ':
+            TestData.sheet.cell(row=2, column=3, value='Seen')
             # sh1.cell(row=2, column=3, value='Seen')
             # exl.save('whatsapp_number.xlsx')
             assert f_sent == ' Read '
         else:
-            # sh1.cell(row=2, column=3, value='Not Seen')
-            # exl.save('whatsapp_number.xlsx')
+            TestData.sheet.cell(row=2, column=3, value='Not Seen')
+            TestData.data_load.save(TestData.EXCEL_EXECUTABLE_PATH)
             assert f_sent == ' Delivered '
         log = self.getLogger()
         log.info("successfully write message status on excel")
@@ -60,7 +60,7 @@ class TestWhatsApp(BaseClass):
 
     def test_tc005(self):
         homepage = HomePage(self.driver)
-        self.driver.find_element_by_xpath("//span[@data-testid='menu']").click()
-        self.driver.find_element_by_xpath("//div[@aria-label='Log out']").click()
+        homepage.logout1().click()
+        homepage.logout2().click()
         log = self.getLogger()
         log.info("successfully logged out from whatsapp")
