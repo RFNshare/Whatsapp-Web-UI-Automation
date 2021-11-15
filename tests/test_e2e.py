@@ -10,32 +10,20 @@ class TestWhatsApp(BaseClass):
 
     def test_tc001(self):
         homepage = HomePage(self.driver)
-        data = "01601259370"  # Excel Implement
-        homepage.searched_contact().send_keys(data)
+        homepage.searched_contact()
         log = self.getLogger()
         log.info("Display searched contact")
 
     def test_tc002(self):
         homepage = HomePage(self.driver)
-        data = "01601259370"  # Excel Implement
-        msg_data = "Hello world"
-        homepage.search_field().clear()
-        homepage.search_field().send_keys(data)
-        homepage.search_field().send_keys(Keys.ENTER)
-        time.sleep(2)
-        homepage.msg_field().send_keys(msg_data)
-        homepage.msg_field().send_keys(Keys.ENTER)
+        homepage.search_field()
         log = self.getLogger()
         log.info("Successfully send message")
 
     def test_tc003(self):
         homepage = HomePage(self.driver)
-        time.sleep(2)
-        data = "01601259370"  # Excel Implement
-        msg_data = "Hello world two"
-        homepage.search_field().send_keys(data)
-        homepage.search_field().send_keys(Keys.ENTER)
-        homepage.msg_field().send_keys(msg_data)
+        homepage.search_field()
+        homepage.msg_field().send_keys(HomePage.msg_data)
         homepage.msg_field().send_keys(Keys.ENTER)
         sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-check"]')
         sent_reversed = sent[-1]
