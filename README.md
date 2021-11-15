@@ -16,7 +16,7 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
     git clone https://github.com/RFNshare/Whatsapp-Web-UI-Automation.git
     ```
 
-2. Go to the project's root directory and install requirements.
+2. Go to the project's root directory and install requirements(Recommended create virtual env first).
     ```
     pip install -r requirements.txt
     ```
