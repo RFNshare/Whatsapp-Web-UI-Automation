@@ -2,49 +2,41 @@ import time
 
 import pytest
 from selenium.webdriver import Keys
-
+from pageObjects.home_page import HomePage
 from utilites.BaseClass import BaseClass
 
 
 class TestWhatsApp(BaseClass):
 
     def test_tc001(self):
-        time.sleep(2)
+        homepage = HomePage(self.driver)
         data = "01601259370"  # Excel Implement
-        search_field = self.driver.find_element_by_xpath("//div[@role='textbox']")
-        search_field.send_keys(data)
-        # time.sleep(2)
-        # assert search_field.text == data
+        homepage.searched_contact().send_keys(data)
         log = self.getLogger()
         log.info("Display searched contact")
-        time.sleep(2)
 
     def test_tc002(self):
-        time.sleep(2)
+        homepage = HomePage(self.driver)
         data = "01601259370"  # Excel Implement
         msg_data = "Hello world"
-        search_field = self.driver.find_element_by_xpath("//div[@role='textbox']")
-        search_field.clear()
-        search_field.send_keys(data)
-        search_field.send_keys(Keys.ENTER)
+        homepage.search_field().clear()
+        homepage.search_field().send_keys(data)
+        homepage.search_field().send_keys(Keys.ENTER)
         time.sleep(2)
-        msg_field = self.driver.find_element_by_css_selector("div[title='Type a message']")
-        msg_field.send_keys(msg_data)
-        msg_field.send_keys(Keys.ENTER)
+        homepage.msg_field().send_keys(msg_data)
+        homepage.msg_field().send_keys(Keys.ENTER)
         log = self.getLogger()
         log.info("Successfully send message")
-        time.sleep(2)
 
     def test_tc003(self):
+        homepage = HomePage(self.driver)
         time.sleep(2)
         data = "01601259370"  # Excel Implement
         msg_data = "Hello world two"
-        search_field = self.driver.find_element_by_xpath("//div[@role='textbox']")
-        search_field.send_keys(data)
-        search_field.send_keys(Keys.ENTER)
-        msg_field = self.driver.find_element_by_css_selector("div[title='Type a message']")
-        msg_field.send_keys(msg_data)
-        msg_field.send_keys(Keys.ENTER)
+        homepage.search_field().send_keys(data)
+        homepage.search_field().send_keys(Keys.ENTER)
+        homepage.msg_field().send_keys(msg_data)
+        homepage.msg_field().send_keys(Keys.ENTER)
         sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-check"]')
         sent_reversed = sent[-1]
         time.sleep(2)
@@ -78,6 +70,7 @@ class TestWhatsApp(BaseClass):
         time.sleep(2)
 
     def test_tc005(self):
+        homepage = HomePage(self.driver)
         self.driver.find_element_by_xpath("//span[@data-testid='menu']").click()
         self.driver.find_element_by_xpath("//div[@aria-label='Log out']").click()
         log = self.getLogger()
