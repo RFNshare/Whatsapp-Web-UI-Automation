@@ -18,7 +18,7 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
 
 2. Go to the project's root directory and install requirements.
     ```
-    pip3 freeze > requirements.txt
+    pip install -r requirements.txt
     ```
 
 3. Run this script for Chrome.
