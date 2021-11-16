@@ -15,32 +15,37 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
     ```
     git clone https://github.com/RFNshare/Whatsapp-Web-UI-Automation.git
     ```
+   
+2. If you clone this repository before then run this on the project's root directory
+    ```
+    git pull
+    ```
 
-2. Go to the project's root directory and install requirements(Recommended create virtual env first).
+3. Go to the project's root directory and install requirements(Recommended create virtual env first).
     ```
     pip install -r requirements.txt
     ```
 
-3. Run this script for Chrome.
+4. Run this script for Chrome.
     ```
     py.test --browser_name chrome -v -s
 
     ```
    This will open a browser in the current window.
-4. . Run this script for Firefox.
+5. . Run this script for Firefox.
     ```
     py.test --browser_name firefox -v -s
 
     ```
    This will open a browser in the current window.
 
-5. This will default cmd. Open with Chrome.
+6. This will default cmd. Open with Chrome.
     ```
     py.test 
 
     ```
    
-6. Generate HTML reports with run script include log.
+7. Generate HTML reports with run script include log.
     ```
     pytest --html=report.html --capture=tee-sys 
 
