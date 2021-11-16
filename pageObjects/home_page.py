@@ -13,7 +13,7 @@ class HomePage:
         # self.driver.get(TestData.BASE_URL)
 
     def searched_contact(self):
-        return self.driver.find_element(*self.locator.SEARCH_TEXTBOX).send_keys(TestData.SAMPLE_DATA)
+        return self.driver.find_element(*self.locator.SEARCH_TEXTBOX)
 
     def search_field(self):
         self.driver.find_element(*self.locator.SEARCH_TEXTBOX).clear()

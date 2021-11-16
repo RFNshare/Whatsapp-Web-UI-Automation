@@ -1,6 +1,7 @@
-from selenium import webdriver
-import pytest
 import time
+
+import pytest
+from selenium import webdriver
 
 
 def pytest_addoption(parser):

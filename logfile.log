@@ -112,3 +112,11 @@
 2021-11-15 15:31:18,295 :INFO : test_tc003 :Successfully write result on excel
 2021-11-15 15:31:22,376 :INFO : test_tc004 :successfully write message status on excel
 2021-11-15 15:31:24,513 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 10:35:51,911 :INFO : test_tc001 :Display searched contact
+2021-11-16 10:36:55,683 :INFO : test_tc001 :Display searched contact
+2021-11-16 10:39:59,824 :INFO : test_tc001 :Display searched contact
+2021-11-16 10:40:49,430 :INFO : test_tc001 :Display searched contact
+2021-11-16 10:42:34,739 :INFO : test_tc001 :Display searched contact
+2021-11-16 10:44:31,507 :INFO : test_tc001 :Display searched contact
+2021-11-16 10:44:31,518 :INFO : test_tc001 :01601259370
+2021-11-16 10:49:07,081 :INFO : test_tc001 :Display searched contact

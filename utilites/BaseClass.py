@@ -1,11 +1,13 @@
 import inspect
-
-import pytest
 import logging
+import pytest
 
 
 @pytest.mark.usefixtures("setup")
 class BaseClass:
+    # def verifyLinkPresence(self, text):
+    #     element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(By.LINK_TEST, text))
+
     def getLogger(self):
         loggerName = inspect.stack()[1][3]
         logger = logging.getLogger(loggerName)

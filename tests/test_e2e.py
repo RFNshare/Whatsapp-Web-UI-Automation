@@ -2,16 +2,19 @@ import time
 
 import pytest
 from selenium.webdriver import Keys
+
 from pageObjects.home_page import HomePage
 from utilites.BaseClass import BaseClass
 from utilites.TestData import TestData
 
 
 class TestWhatsApp(BaseClass):
-
+    @pytest.mark.now
     def test_tc001(self):
         homepage = HomePage(self.driver)
-        homepage.searched_contact()
+        homepage.searched_contact().send_keys(TestData.SAMPLE_DATA)
+        time.sleep(2)
+        assert homepage.searched_contact().text == TestData.SAMPLE_DATA
         log = self.getLogger()
         log.info("Display searched contact")
 
