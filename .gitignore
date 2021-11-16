@@ -2,6 +2,10 @@ venv
 .pytest_cache
 .idea
 TestScripts/.pytest_cache
+PageObjects/__pycache__
+TestScripts/__pycache__
+data/__pycache__
+utilites/__pycache__
 assets
 data/logfile.log
 geckodriver.log
