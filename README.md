@@ -20,32 +20,36 @@ This is a selenium based framework that interacts with Whatsapp Web interface an
     ```
     git pull
     ```
-
-3. Go to the project's root directory and install requirements(Recommended create virtual env first).
+3. Copy/Cut files folder from project's root directory & paste it in C drive root directory.
+    ```
+    C:\files
+    ```
+   Make sure you have driver & Excel file in that path.
+4. Go to the project's root directory and install requirements(Recommended create virtual env first).
     ```
     pip install -r requirements.txt
     ```
 
-4. Run this script for Chrome.
+5. Run this script for Chrome.
     ```
     py.test --browser_name chrome -v -s
 
     ```
    This will open a browser in the current window.
-5. . Run this script for Firefox.
+6. . Run this script for Firefox.
     ```
     py.test --browser_name firefox -v -s
 
     ```
    This will open a browser in the current window.
 
-6. This will default cmd. Open with Chrome.
+7. This will default cmd. Open with Chrome.
     ```
     py.test 
 
     ```
    
-7. Generate HTML reports with run script include log.
+8. Generate HTML reports with run script include log.
     ```
     pytest --html=report.html --capture=tee-sys 
 

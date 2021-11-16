@@ -1,16 +1,16 @@
 import time
 
 import pytest
-from selenium.webdriver import Keys
 
 from PageObjects.home_page import HomePage
 from utilites.BaseClass import BaseClass
-from utilites.TestData import TestData
+from data.TestData import TestData
 
 
 class TestWhatsApp(BaseClass):
 
     def test_tc001(self):
+        time.sleep(2)
         homepage = HomePage(self.driver)
         homepage.searched_contact().send_keys(TestData.SAMPLE_DATA)
         time.sleep(2)

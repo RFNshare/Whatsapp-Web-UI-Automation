@@ -2,9 +2,7 @@ import openpyxl
 
 
 class TestData():
-    CHROME_EXECUTABLE_PATH = r"C:\Users\rfnsh\PycharmProjects\WhatsappWebUiAutomation\utilites\chromedriver.exe"
-    FIREFOX_EXECUTABLE_PATH = r"C:\Users\rfnsh\PycharmProjects\WhatsappWebUiAutomation\utilites\geckodriver.exe"
-    EXCEL_EXECUTABLE_PATH = r"C:\Users\rfnsh\PycharmProjects\WhatsappWebUiAutomation\assets\test.xlsx"
+    EXCEL_EXECUTABLE_PATH = "C:/files/test.xlsx"
     BASE_URL = "https://web.whatsapp.com/"
     SEARCH_TERM = "Sample"
     _404 = "Check your connection"

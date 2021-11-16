@@ -1,6 +1,6 @@
 from selenium.webdriver import Keys
 
-from utilites.TestData import TestData
+from data.TestData import TestData
 from utilites.locators import *
 
 

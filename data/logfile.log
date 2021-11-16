@@ -143,3 +143,32 @@
 2021-11-16 12:13:59,671 :INFO : test_tc005 :successfully logged out from whatsapp
 2021-11-16 12:14:44,793 :INFO : test_tc005 :successfully logged out from whatsapp
 2021-11-16 12:21:37,229 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 12:38:14,892 :INFO : test_tc002 :Successfully send message
+2021-11-16 12:38:17,889 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 12:38:23,977 :INFO : test_tc004 :successfully write message status on excel
+2021-11-16 12:38:26,153 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 12:39:08,570 :INFO : test_tc001 :Display searched contact
+2021-11-16 12:39:09,220 :INFO : test_tc002 :Successfully send message
+2021-11-16 12:39:12,027 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 12:39:18,115 :INFO : test_tc004 :successfully write message status on excel
+2021-11-16 12:39:20,277 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 12:39:45,587 :INFO : test_tc001 :Display searched contact
+2021-11-16 12:39:46,205 :INFO : test_tc002 :Successfully send message
+2021-11-16 12:39:49,046 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 12:39:55,104 :INFO : test_tc004 :successfully write message status on excel
+2021-11-16 12:39:57,262 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 14:52:52,702 :INFO : test_tc001 :Display searched contact
+2021-11-16 14:52:53,387 :INFO : test_tc002 :Successfully send message
+2021-11-16 14:52:56,250 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 14:53:02,326 :INFO : test_tc004 :successfully write message status on excel
+2021-11-16 14:53:04,496 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 14:53:32,161 :INFO : test_tc001 :Display searched contact
+2021-11-16 14:53:32,793 :INFO : test_tc002 :Successfully send message
+2021-11-16 14:53:35,798 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 14:53:41,892 :INFO : test_tc004 :successfully write message status on excel
+2021-11-16 14:53:44,076 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 14:54:23,277 :INFO : test_tc001 :Display searched contact
+2021-11-16 14:54:23,992 :INFO : test_tc002 :Successfully send message
+2021-11-16 14:54:27,027 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 14:54:33,120 :INFO : test_tc004 :successfully write message status on excel
+2021-11-16 14:54:35,311 :INFO : test_tc005 :successfully logged out from whatsapp
