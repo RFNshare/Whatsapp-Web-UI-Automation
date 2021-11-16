@@ -5,7 +5,6 @@ from utilites.locators import *
 
 
 class HomePage:
-    data = "01601259370"  # Excel Implement
 
     def __init__(self, driver):
         self.driver = driver
@@ -37,3 +36,6 @@ class HomePage:
 
     def logout2(self):
         return self.driver.find_element(*self.locator.LOGOUT_BUTTON)
+
+    def home(self):
+        return self.driver.find_element(*self.locator.BASE_URL)

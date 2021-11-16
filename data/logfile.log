@@ -139,3 +139,7 @@
 2021-11-16 12:07:05,907 :INFO : test_tc004 :successfully write message status on excel
 2021-11-16 12:07:54,173 :INFO : test_tc003 :Successfully write result on excel
 2021-11-16 12:08:00,231 :INFO : test_tc004 :successfully write message status on excel
+2021-11-16 12:12:26,273 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 12:13:59,671 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 12:14:44,793 :INFO : test_tc005 :successfully logged out from whatsapp
+2021-11-16 12:21:37,229 :INFO : test_tc005 :successfully logged out from whatsapp

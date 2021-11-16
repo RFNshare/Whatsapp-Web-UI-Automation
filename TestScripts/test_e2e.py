@@ -25,7 +25,6 @@ class TestWhatsApp(BaseClass):
         log = self.getLogger()
         log.info("Successfully send message")
 
-    @pytest.mark.now
     def test_tc003(self):
         homepage = HomePage(self.driver)
         log = self.getLogger()
@@ -48,7 +47,6 @@ class TestWhatsApp(BaseClass):
         finally:
             time.sleep(2)
 
-    @pytest.mark.now
     def test_tc004(self):
         homepage = HomePage(self.driver)
         log = self.getLogger()
@@ -73,9 +71,11 @@ class TestWhatsApp(BaseClass):
         log.info("successfully write message status on excel")
         time.sleep(2)
 
+    @pytest.mark.now
     def test_tc005(self):
         homepage = HomePage(self.driver)
         homepage.logout1().click()
         homepage.logout2().click()
+        assert TestData.BASE_URL == homepage.home().get_attribute('content')
         log = self.getLogger()
         log.info("successfully logged out from whatsapp")

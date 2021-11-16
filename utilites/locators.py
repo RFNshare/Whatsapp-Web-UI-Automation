@@ -15,3 +15,5 @@ class HomePageLocators(object):
     # --- Logout Button's Locators ---
     THREE_DOT_BUTTON = (By.XPATH, "//span[@data-testid='menu']")
     LOGOUT_BUTTON = (By.XPATH, "//div[@aria-label='Log out']")
+
+    BASE_URL = (By.XPATH, "//meta[@content='https://web.whatsapp.com/']")
