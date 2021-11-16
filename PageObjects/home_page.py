@@ -27,7 +27,7 @@ class HomePage:
         return self.driver.find_element(*self.locator.MESSAGE_TEXTBOX)
 
     def sent(self):
-        return self.driver.find_element(*self.locator.MESSAGE_SENT)
+        return self.driver.find_elements(*self.locator.MESSAGE_SENT)
 
     def seen_notseen(self):
         return self.driver.find_element(*self.locator.MESSAGE_SEEN_UNSEEN)

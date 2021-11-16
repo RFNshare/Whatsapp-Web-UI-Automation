@@ -18,7 +18,6 @@ class TestWhatsApp(BaseClass):
         log = self.getLogger()
         log.info("Display searched contact")
 
-    @pytest.mark.now
     def test_tc002(self):
         homepage = HomePage(self.driver)
         homepage.search_field()
@@ -26,22 +25,29 @@ class TestWhatsApp(BaseClass):
         log = self.getLogger()
         log.info("Successfully send message")
 
+    @pytest.mark.now
     def test_tc003(self):
         homepage = HomePage(self.driver)
+        log = self.getLogger()
         homepage.search_field()
         homepage.msg_field()
-        sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-check"]')
-        sent_reversed = sent[-1]
+        # sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-check"]')
+        sent_reversed = homepage.sent()[-1]
         time.sleep(2)
         f_sent = sent_reversed.get_attribute('aria-label')
-
-        if sent == ' Sent ' or ' Delivered ':
-            TestData.sheet.cell(row=2, column=2, value='Sent')
-            TestData.data_load.save(TestData.EXCEL_EXECUTABLE_PATH)
         assert f_sent == ' Sent ' or ' Delivered '
-        log = self.getLogger()
-        log.info("Successfully write result on excel")
-        time.sleep(2)
+        try:
+            if f_sent == ' Sent ' or ' Delivered ':
+                TestData.sheet.cell(row=2, column=2, value='Sent')
+                TestData.data_load.save(TestData.EXCEL_EXECUTABLE_PATH)
+                log.info("Successfully write result on excel")
+            elif f_sent == ' Pending ':
+                log.warning(TestData._404)
+        except Exception as e:
+            log.error(e)
+            log.error("Close your excel file & run test case again")
+        finally:
+            time.sleep(2)
 
     def test_tc004(self):
         sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-dblcheck"]')

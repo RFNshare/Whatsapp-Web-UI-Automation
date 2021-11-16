@@ -7,7 +7,7 @@ class TestData():
     EXCEL_EXECUTABLE_PATH = r"C:\Users\rfnsh\PycharmProjects\WhatsappWebUiAutomation\assets\test.xlsx"
     BASE_URL = "https://web.whatsapp.com/"
     SEARCH_TERM = "Sample"
-
+    _404 = "Check your connection"
     HOME_PAGE_TITLE = "Whatsapp"
     NO_RESULTS_TEXT = "No results found."
     data_load = openpyxl.load_workbook(EXCEL_EXECUTABLE_PATH)

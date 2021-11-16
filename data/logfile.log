@@ -125,3 +125,13 @@
 2021-11-16 11:26:27,991 :INFO : test_tc003 :Successfully write result on excel
 2021-11-16 11:28:53,336 :INFO : test_tc003 :Successfully write result on excel
 2021-11-16 11:29:25,291 :INFO : test_tc002 :Successfully send message
+2021-11-16 11:34:12,016 :INFO : test_tc002 :Successfully send message
+2021-11-16 11:37:19,099 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 11:40:58,769 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 11:48:14,960 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 11:48:41,883 :INFO : test_tc003 :[Errno 13] Permission denied: 'C:\\Users\\rfnsh\\PycharmProjects\\WhatsappWebUiAutomation\\assets\\test.xlsx'
+2021-11-16 11:48:41,883 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 11:50:26,411 :INFO : test_tc003 :[Errno 13] Permission denied: 'C:\\Users\\rfnsh\\PycharmProjects\\WhatsappWebUiAutomation\\assets\\test.xlsx'
+2021-11-16 11:51:57,581 :INFO : test_tc003 :[Errno 13] Permission denied: 'C:\\Users\\rfnsh\\PycharmProjects\\WhatsappWebUiAutomation\\assets\\test.xlsx'
+2021-11-16 11:51:57,586 :INFO : test_tc003 :Close your excel file & run test case again
+2021-11-16 11:52:51,202 :INFO : test_tc003 :Successfully write result on excel
