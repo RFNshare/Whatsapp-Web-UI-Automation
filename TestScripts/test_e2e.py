@@ -31,7 +31,6 @@ class TestWhatsApp(BaseClass):
         log = self.getLogger()
         homepage.search_field()
         homepage.msg_field()
-        # sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-check"]')
         sent_reversed = homepage.sent()[-1]
         time.sleep(2)
         f_sent = sent_reversed.get_attribute('aria-label')
@@ -49,22 +48,28 @@ class TestWhatsApp(BaseClass):
         finally:
             time.sleep(2)
 
+    @pytest.mark.now
     def test_tc004(self):
-        sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-dblcheck"]')
-        sent_reversed = sent[-1]
+        homepage = HomePage(self.driver)
+        log = self.getLogger()
+        sent_reversed = homepage.seen_notseen()[-1]
         time.sleep(2)
         f_sent = sent_reversed.get_attribute('aria-label')
-
-        if f_sent == ' Read ':
-            TestData.sheet.cell(row=2, column=3, value='Seen')
-            # sh1.cell(row=2, column=3, value='Seen')
-            # exl.save('whatsapp_number.xlsx')
-            assert f_sent == ' Read '
-        else:
-            TestData.sheet.cell(row=2, column=3, value='Not Seen')
-            TestData.data_load.save(TestData.EXCEL_EXECUTABLE_PATH)
-            assert f_sent == ' Delivered '
-        log = self.getLogger()
+        assert f_sent == ' Read ' or ' Delivered '
+        try:
+            if f_sent == ' Read ':
+                TestData.sheet.cell(row=2, column=3, value='Seen')
+                TestData.data_load.save(TestData.EXCEL_EXECUTABLE_PATH)
+            elif f_sent == ' Delivered ':
+                TestData.sheet.cell(row=2, column=3, value='Not Seen')
+                TestData.data_load.save(TestData.EXCEL_EXECUTABLE_PATH)
+            else:
+                log.warning(TestData._404)
+        except Exception as e:
+            log.error(e)
+            log.error("Close your excel file & run test case again")
+        finally:
+            time.sleep(2)
         log.info("successfully write message status on excel")
         time.sleep(2)
 

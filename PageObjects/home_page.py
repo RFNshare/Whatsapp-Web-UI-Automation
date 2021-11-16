@@ -30,7 +30,7 @@ class HomePage:
         return self.driver.find_elements(*self.locator.MESSAGE_SENT)
 
     def seen_notseen(self):
-        return self.driver.find_element(*self.locator.MESSAGE_SEEN_UNSEEN)
+        return self.driver.find_elements(*self.locator.MESSAGE_SEEN_UNSEEN)
 
     def logout1(self):
         return self.driver.find_element(*self.locator.THREE_DOT_BUTTON)
