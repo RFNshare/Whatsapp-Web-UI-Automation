@@ -123,7 +123,7 @@ Project Link: [WhatsApp WebUI Automation](https://github.com/RFNshare/Whatsapp-W
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/badge/contributors-0-brightgreen?style=for-the-badge
+[contributors-shield]: https://img.shields.io/badge/contributors-0-yellow?style=for-the-badge
 [contributors-url]: https://github.com/rfnshare/Whatsapp-Web-UI-Automation/graphs/contributors
 [forks-shield]: https://img.shields.io/badge/froks-0-blue?style=for-the-badge
 [forks-url]: https://github.com/rfnshare/StraightIntLtd/network/members
