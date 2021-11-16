@@ -2,3 +2,7 @@ venv
 .pytest_cache
 .idea
 TestScripts/.pytest_cache
+assets
+data/logfile.log
+geckodriver.log
+report.html
