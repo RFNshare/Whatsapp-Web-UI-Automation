@@ -120,3 +120,8 @@
 2021-11-16 10:44:31,507 :INFO : test_tc001 :Display searched contact
 2021-11-16 10:44:31,518 :INFO : test_tc001 :01601259370
 2021-11-16 10:49:07,081 :INFO : test_tc001 :Display searched contact
+2021-11-16 11:00:46,697 :INFO : test_tc002 :Successfully send message
+2021-11-16 11:16:49,136 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 11:26:27,991 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 11:28:53,336 :INFO : test_tc003 :Successfully write result on excel
+2021-11-16 11:29:25,291 :INFO : test_tc002 :Successfully send message

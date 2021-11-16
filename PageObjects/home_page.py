@@ -19,11 +19,11 @@ class HomePage:
         self.driver.find_element(*self.locator.SEARCH_TEXTBOX).clear()
         self.driver.find_element(*self.locator.SEARCH_TEXTBOX).send_keys(TestData.SAMPLE_DATA)
         self.driver.find_element(*self.locator.SEARCH_TEXTBOX).send_keys(Keys.ENTER)
-        self.driver.find_element(*self.locator.MESSAGE_TEXTBOX).send_keys(TestData.SEARCH_TERM)
-        self.driver.find_element(*self.locator.MESSAGE_TEXTBOX).send_keys(Keys.ENTER)
         return self.driver.find_element(*self.locator.SEARCH_TEXTBOX)
 
     def msg_field(self):
+        self.driver.find_element(*self.locator.MESSAGE_TEXTBOX).send_keys(TestData.SEARCH_TERM)
+        self.driver.find_element(*self.locator.MESSAGE_TEXTBOX).send_keys(Keys.ENTER)
         return self.driver.find_element(*self.locator.MESSAGE_TEXTBOX)
 
     def sent(self):

@@ -3,13 +3,13 @@ import time
 import pytest
 from selenium.webdriver import Keys
 
-from pageObjects.home_page import HomePage
+from PageObjects.home_page import HomePage
 from utilites.BaseClass import BaseClass
 from utilites.TestData import TestData
 
 
 class TestWhatsApp(BaseClass):
-    @pytest.mark.now
+
     def test_tc001(self):
         homepage = HomePage(self.driver)
         homepage.searched_contact().send_keys(TestData.SAMPLE_DATA)
@@ -18,17 +18,18 @@ class TestWhatsApp(BaseClass):
         log = self.getLogger()
         log.info("Display searched contact")
 
+    @pytest.mark.now
     def test_tc002(self):
         homepage = HomePage(self.driver)
         homepage.search_field()
+        homepage.msg_field()
         log = self.getLogger()
         log.info("Successfully send message")
 
     def test_tc003(self):
         homepage = HomePage(self.driver)
         homepage.search_field()
-        homepage.msg_field().send_keys(TestData.SEARCH_TERM)
-        homepage.msg_field().send_keys(Keys.ENTER)
+        homepage.msg_field()
         sent = self.driver.find_elements_by_css_selector('span[data-testid="msg-check"]')
         sent_reversed = sent[-1]
         time.sleep(2)
