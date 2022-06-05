@@ -116,7 +116,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@rfnshare](https://twitter.com/rfnshare) - aalfaroque@gmail.com
+Abdullah Al Faroque - [@rfnshare](https://twitter.com/rfnshare) - aalfaroque@gmail.com
 
 Project Link: [WhatsApp WebUI Automation](https://github.com/RFNshare/Whatsapp-Web-UI-Automation.git)
 
